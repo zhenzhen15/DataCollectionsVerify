@@ -1,0 +1,18 @@
+package com.maidian.service;
+
+import com.maidian.entiy.TUser;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
+
+/**
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author zongzz
+ * @since 2021-02-19
+ */
+public interface TUserService extends IService<TUser> {
+    List<TUser> findAllUser();
+}
