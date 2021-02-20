@@ -1,5 +1,7 @@
 package com.maidian.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.maidian.entiy.TUser;
 import com.maidian.service.TUserService;
 import com.maidian.service.impl.TUserServiceImpl;
@@ -19,7 +21,7 @@ import java.util.List;
  * @since 2021-02-19
  */
 @RestController
-//@RequestMapping("/t-user")
+@RequestMapping("/t-user")
 @Slf4j
 public class TUserController {
 
@@ -30,6 +32,7 @@ public class TUserController {
     @GetMapping("findAllUser")
     @ResponseBody
     public List<TUser> findAllUser(){
+        log.info("find-all-user:"+ JSON.toJSONString(tUserService.findAllUser()));
         return tUserService.findAllUser();
     }
 

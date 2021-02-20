@@ -1,8 +1,6 @@
 package com.maidian.service;
 
 import com.maidian.entiy.TUser;
-import com.baomidou.mybatisplus.extension.service.IService;
-
 import java.util.List;
 
 /**
@@ -13,6 +11,6 @@ import java.util.List;
  * @author zongzz
  * @since 2021-02-19
  */
-public interface TUserService extends IService<TUser> {
+public interface TUserService {
     List<TUser> findAllUser();
 }

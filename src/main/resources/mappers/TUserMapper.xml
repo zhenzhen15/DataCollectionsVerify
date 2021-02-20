@@ -4,7 +4,8 @@
 <mapper namespace="com.maidian.mapper.TUserMapper">
 
     <!-- 查找用户信息 -->
-    <select id="findAllUser" resultType="com.maidian.mapper.TUserMapper">
+    <!--resultType=你写成了ampper.TUsermapper-->
+    <select id="findAllUser" resultType="com.maidian.entiy.TUser">
         select * from t_user
     </select>
 

@@ -1,10 +1,8 @@
 package com.maidian.mapper;
 
 import com.maidian.entiy.TUser;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 /**
@@ -15,7 +13,8 @@ import java.util.List;
  * @author zongzz
  * @since 2021-02-19
  */
-
-public interface TUserMapper extends BaseMapper<TUser> {
+@Mapper
+@Component
+public interface TUserMapper {
       List<TUser> findAllUser();
 }
